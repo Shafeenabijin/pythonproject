@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+{{resultt.name}}<br>
+<img src="{{resultt.img.url}}" alt="Image"  style="width:500px;height:400px;">
+{{resultt.desc}}<br>
+<a class="btn btn-warning" href="{% url 'shoppi:update' resultt.id %}">UPDATE</a>
+<a class="btn btn-danger" href="{% url 'shoppi:delete' resultt.id %}">DELETE</a><br>
+{{resultt.price}}<br>
+{% endblock %}
